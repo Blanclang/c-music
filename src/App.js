@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
 import { GlobalStyle } from './style';
 
 import { renderRoutes } from 'react-router-config';//renderRoutes读取路由配置转化为Route标签
+import store from './store/index';
 import routes from './routes/index.js';
 import { HashRouter } from 'react-router-dom';
 
@@ -18,10 +20,12 @@ import { HashRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <HashRouter>
-      <GlobalStyle></GlobalStyle>
-      { renderRoutes(routes) }
-    </HashRouter>
+    <Provider store = { store }>
+      <HashRouter>
+        <GlobalStyle></GlobalStyle>
+        { renderRoutes(routes) }
+      </HashRouter>
+    </Provider>
   )
 }
 
