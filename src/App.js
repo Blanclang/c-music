@@ -7,16 +7,7 @@ import store from './store/index';
 import routes from './routes/index.js';
 import { HashRouter } from 'react-router-dom';
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <GlobalStyle></GlobalStyle>
-//         是的发个
-//       </div>
-//     );
-//   }
-// }
+
 
 function App() {
   return (
@@ -29,6 +20,16 @@ function App() {
   )
 }
 
+// class App extends Component {
+//   render() {
+//     return (
+//       <div className="App">
+//         <GlobalStyle></GlobalStyle>
+//         是的发个
+//       </div>
+//     );
+//   }
+// }
 export default App;
 
 
